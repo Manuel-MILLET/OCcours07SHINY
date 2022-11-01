@@ -1,4 +1,4 @@
-update mardi 01 novembre 2022 by Manuel MILLET
+update mardi 01 novembre 2022 by Manuel MILLET .
 
 # Projet 07 "Shiny" site d'agence de création fil rouge du cours OpenClassrooms créez une application avec REACT
 
