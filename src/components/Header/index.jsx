@@ -1,28 +1,11 @@
 import { Link } from 'react-router-dom'
-
-function Header() {
-  return (
-    <nav>
-      <Link to="/">Accueil</Link>
-      <Link to="/survey/42">Questionnaire</Link>
-    </nav>
-  )
-}
-
-export default Header
-
-/*
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { StyledLink } from '../../utils/style/Atoms'
-import LightLogo from '../../assets/light-logo.png'
 import DarkLogo from '../../assets/dark-logo.png'
-import { useTheme } from '../../utils/hooks'
 
 const HomeLogo = styled.img`
   height: 70px;
 `
-
 const NavContainer = styled.nav`
   padding: 30px;
   display: flex;
@@ -30,24 +13,26 @@ const NavContainer = styled.nav`
   align-items: center;
 `
 
-function Header() {
-  const { theme } = useTheme()
+/*
+const StyledLink = styled(Link)`
+    padding: 15px;
+    color: #8186a0;
+    text-decoration: none;
+    font-size: 18px;
+    ${(props) =>
+      props.$isFullLink &&
+      `color: white; border-radius: 30px; background-color: ${colors.primary};`}
+`
+*/
 
+function Header() {
   return (
     <NavContainer>
-      <Link to="/">
-        <HomeLogo src={theme === 'light' ? DarkLogo : LightLogo} />
-      </Link>
+      <Link to="/"><HomeLogo src={DarkLogo} /></Link>
       <div>
-        <StyledLink $theme={theme} to="/">
-          Accueil
-        </StyledLink>
-        <StyledLink $theme={theme} to="/freelances">
-          Profils
-        </StyledLink>
-        <StyledLink to="/survey/1" $isFullLink>
-          Faire le test
-        </StyledLink>
+        <StyledLink to="/">Accueil</StyledLink>
+        <StyledLink to="/freelances">Profils</StyledLink>
+        <StyledLink to="/survey/1" $isFullLink>Faire le test</StyledLink>
       </div>
     </NavContainer>
   )
@@ -55,5 +40,31 @@ function Header() {
 
 export default Header
 
+/*
+
+import { StyledLink } from '../../utils/style/Atoms'
+import DarkLogo from '../../assets/dark-logo.png'
+import { useTheme } from '../../utils/hooks'
+import LightLogo from '../../assets/light-logo.png'
+import colors from '../../utils/style/colors'
+
+const StyledLink = styled(Link)`
+    padding: 15px;
+    color: #8186a0;
+    text-decoration: none;
+    font-size: 18px;
+    ${(props) =>
+      props.$isFullLink &&
+      `color: white; border-radius: 30px; background-color:  ${colors.primary};`}
+`
+const HomeLogo = styled.img`
+  height: 70px;
+`
+const NavContainer = styled.nav`
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
 
 */
