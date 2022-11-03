@@ -1,5 +1,9 @@
 /*
+Projet 07 "Shiny" cours OpenClassrooms 
+par Manuel MILLET le 03 novembre 2022 15h00 
 
+*/
+/*
 import styled from 'styled-components'
 import colors from '../../utils/style/colors'
 import EmptyIllustration from '../../assets/empty.svg'

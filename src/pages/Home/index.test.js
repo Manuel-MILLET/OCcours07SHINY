@@ -1,5 +1,8 @@
 /*
-
+Projet 07 "Shiny" cours OpenClassrooms 
+par Manuel MILLET le 03 novembre 2022 15h00 
+*/
+/*
 import { MemoryRouter } from 'react-router-dom'
 import { render, screen } from '@testing-library/react'
 import Home from './'

@@ -1,21 +1,10 @@
+/*
+Projet 07 "Shiny" cours OpenClassrooms 
+par Manuel MILLET le 03 novembre 2022
+P2-C3 19h00 
+*/
 import { Link } from 'react-router-dom'
 import colors from './colors'
-import styled from 'styled-components'
-
-export const StyledLink = styled(Link)`
-  padding: 10px 15px;
-  color: #8186a0;
-  text-decoration: none;
-  font-size: 18px;
-  text-align: center;
-  ${(props) =>
-    props.$isFullLink &&
-    `color: white; 
-    border-radius: 30px; 
-    background-color: ${colors.primary};`}
-`
-
-/*
 import styled, { keyframes } from 'styled-components'
 
 const rotate = keyframes`
@@ -48,4 +37,3 @@ export const StyledLink = styled(Link)`
     border-radius: 30px; 
     background-color: ${colors.primary};`}
 `
-*/

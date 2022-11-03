@@ -1,5 +1,8 @@
 /*
-
+Projet 07 "Shiny" cours OpenClassrooms 
+par Manuel MILLET le 03 novembre 2022 15h00 
+*/
+/*
 import Results, { formatQueryParams, formatJobList } from './'
 import { rest } from 'msw'
 import { setupServer } from 'msw/node'

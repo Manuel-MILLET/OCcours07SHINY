@@ -1,4 +1,8 @@
 /*
+Projet 07 "Shiny" cours OpenClassrooms 
+par Manuel MILLET le 03 novembre 2022 
+P2-C3 19h00 
+*/
 
 import { useState, useEffect, useContext } from 'react'
 import { ThemeContext } from '../context'
@@ -32,5 +36,3 @@ export function useTheme() {
   const { theme, toggleTheme } = useContext(ThemeContext)
   return { theme, toggleTheme }
 }
-
-*/

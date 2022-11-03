@@ -1,21 +1,24 @@
+/*
+Projet 07 "Shiny" cours OpenClassrooms 
+par Manuel MILLET le 03 novembre 2022
+P2-C3 19h00 
+
+*/
 import PropTypes from 'prop-types'
 import DefaultPicture from '../../assets/profile.png'
 import styled from 'styled-components'
 import colors from '../../utils/style/colors'
+import { useTheme } from '../../utils/hooks'
 
 const CardLabel = styled.span`
-    color: #5843e4;
+    color: ${({ theme }) => (theme === 'light' ? colors.primary : '#ffffff')};
     font-size: 22px;
-    font-weight: bold;
+    font-weight: normal;
+    padding-left: 15px;
 `
-/*
-const CardLabel = styled.span`
-  color: ${({ theme }) => (theme === 'light' ? colors.primary : '#ffffff')};
-
-*/
 
 const CardTitle = styled.div`
-    color: black;
+    color: ${({ theme }) => (theme === 'light' ? '#000000' : '#ffffff')};
     font-size: 22px;
     font-weight: normal;
     align-self: center;
@@ -31,7 +34,8 @@ const CardWrapper = styled.div`
     flex-direction: column;
     justify-content: space-around;
     padding: 15px;
-    background-color: ${colors.backgroundLight};
+    background-color: ${({ theme }) =>
+    theme === 'light' ? colors.backgroundLight : colors.backgroundDark};
     border-radius: 30px;
     width: 300px;
     height: 300px;
@@ -43,13 +47,15 @@ const CardWrapper = styled.div`
 `
 
 function Card({ label, title, picture }) {
-    return (
-      <CardWrapper>
-        <CardLabel>{label}</CardLabel>
-        <CardImage src={picture} alt="freelance" />
-        <CardTitle>{title}</CardTitle>
-      </CardWrapper>
-    )
+  const { theme } = useTheme()
+
+  return (
+    <CardWrapper theme={theme}>
+      <CardLabel theme={theme}>{label}</CardLabel>
+      <CardImage src={picture} alt="freelance" />
+      <CardTitle theme={theme}>{title}</CardTitle>
+    </CardWrapper>
+  )
 }
  
 Card.propTypes = {

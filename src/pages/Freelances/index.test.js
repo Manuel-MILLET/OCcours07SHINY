@@ -1,4 +1,8 @@
 /*
+Projet 07 "Shiny" cours OpenClassrooms 
+par Manuel MILLET le 03 novembre 2022 15h00 
+*/
+/*
 import { rest } from 'msw'
 import '@testing-library/jest-dom/extend-expect'
 import { setupServer } from 'msw/node'

@@ -1,3 +1,7 @@
+/*
+Projet 07 "Shiny" cours OpenClassrooms 
+par Manuel MILLET le 03 novembre 2022 15h00 
+*/
 const colors = {
     primary: '#5843e4',
     secondary: '#8186A0',

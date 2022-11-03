@@ -1,5 +1,12 @@
 /*
+Projet 07 "Shiny" cours OpenClassrooms 
+par Manuel MILLET le 03 novembre 2022 
+P2-C2 19h00 
+*/
 
+
+
+/*
 import { render as rtlRender } from '@testing-library/react'
 import { ThemeProvider, SurveyProvider } from '../../utils/context'
 import { MemoryRouter } from 'react-router-dom'
